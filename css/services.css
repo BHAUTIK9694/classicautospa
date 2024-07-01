@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Heebo", sans-serif;
+    --primary-bg-color: #25272d;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.service-title {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #25272d;
+    background-image: url('../img/service-steam-car-detailing.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    isolation: isolate;
+    position: relative;
+    z-index: 1;
+}
+
+.service-title::after {
+    position: absolute;
+    inset: 0;
+    content: '';
+    z-index: -1;
+    box-shadow: inset 0 0 100vw black;
+    backdrop-filter: blur(5px);
+}
+
+.service-title h1 {
+    font-size: 5rem;
+    font-weight: 500;
+    color: white;
+    z-index: 10;
+    position: relative;
+}
+
+.service-title h1::after {
+    content: '';
+    position: absolute;
+    top: 6.4rem;
+    left: .4rem;
+    width: 6rem;
+    height: .2rem;
+    background-color: #d50000;
+}
+
+.services-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem 0;
+}
+
+.service {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.service:hover {
+    background: #547880cf;
+    box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all .5s ease 0;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+    color: #fff;
+}
+
+.service img {
+    width: 100%;
+    height: 100%;
+}
+
+.service .service-info h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 4rem;
+}
+
+.service .service-info {
+    height: 100%;
+    vertical-align: middle;
+    padding: 1rem;
+
+}
+
+.service .service-info ul>li {
+    color: #596168;
+    font-weight: 500;
+    margin-left: 2rem;
+    margin-top: .8rem;
+}
+
+button {
+    width: 100%;
+    margin: 2rem;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    box-shadow: 0 0 16px 8px rgba(213, 0, 0, 0.2);
+    background: linear-gradient(to right, #d50000, #710000);
+    cursor: pointer;
+}
+
+.input-container {
+    position: fixed;
+    bottom: 1rem;
+    right: 3rem;
+    width: 8rem;
+}
+
+@media screen and (max-width: 768px) {
+    .service-title h1::after {
+        left: 7rem;
+    }
+
+    .service {
+        grid-template-columns: 1fr;
+    }
+
+    .service:nth-child(2n) .service-info {
+        order: 2;
+    }
+
+    .service:nth-child(2n) img {
+        order: 1;
+    }
+
+    .service .service-info {
+        padding-bottom: 1rem;
+    }
+
+    .service h3 {
+        text-align: center;
+    }
+}

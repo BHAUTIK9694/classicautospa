@@ -140,7 +140,9 @@ nav .navbar .links li:hover .js-sub-menu {
     nav .navbar {
         max-width: 100%;
         padding: 0 25px;
+
     }
+
 
     .navbar .logo {
         display: none;
@@ -277,5 +279,17 @@ nav .navbar .links li:hover .js-sub-menu {
 @media (max-width:370px) {
     nav .navbar .nav-links {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 337px) {
+    .hero {
+
+        gap: 0rem;
+
+    }
+
+    .hero button {
+        margin-top: 1rem;
     }
 }

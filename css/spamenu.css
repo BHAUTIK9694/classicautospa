@@ -9,8 +9,11 @@
     background-color: #ffffff80;
     color: white;
     padding-inline: 1rem;
+    background-image: url('../img/heroimg1.jpg');
+    background-size: cover;
 }
 
+/* 
 .hero::after {
     content: '';
     position: absolute;
@@ -18,12 +21,12 @@
     left: 0;
     height: 70vh;
     width: 100%;
-    background-image: url('../img/heroimg1.jpg');
+
     background-size: cover;
     background-position: center;
     z-index: -1;
     filter: opacity(.9);
-}
+} */
 
 
 .hero h1 {
@@ -135,11 +138,14 @@
     width: 22rem;
     box-shadow: -5px 5px 15px 1px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
+    background: #54788039;
 }
 
 .packages .card {
-    height: 40rem;
+    height: 45rem;
     position: relative;
+    background: #54788039;
+    margin: 20px;
 }
 
 .card .btn-con {
@@ -150,6 +156,16 @@
 .card:hover {
     background-color: #547880cf;
     color: white;
+
+    .pack {
+        color: white;
+    }
+
+    .bottom-bar {
+        border-bottom: 2px solid #fff;
+    }
+
+
 }
 
 .packages .card:hover .price-tag {
@@ -195,33 +211,36 @@ ul li.price {
 }
 
 .bottom-bar {
-    border-bottom: 2px solid hsla(240, 8%, 85%, 0.582);
+    border-bottom: 2px solid #547880;
 }
 
-.card.active .bottom-bar {
-    border-bottom: 2px solid hsla(240, 8%, 85%, 0.253);
-}
 
 .pack {
-    font-size: 1.1rem;
+    font-size: 30px;
+    color: #547880;
 }
 
 @media (max-width: 280px) {
     .cards {
         margin: 0;
         display: flex;
-        flex-direction: column;
     }
 
     .card {
-        transform: scale(0.8);
+        /* transform: scale(0.8); */
         margin-bottom: 1rem;
     }
 
-    .cards .card.active {
-        transform: scale(0.8);
+}
+
+@media (max-width: 337px) {
+    .hero h1 {
+        color: #4d5256;
+        font-size: 3rem;
     }
 }
+
+
 
 .subscribe {
     width: 97vw;
@@ -236,7 +255,7 @@ ul li.price {
 
 .subscribe h1 {
     text-align: center;
-    text-align: center;
+    color: #4d5256;
 }
 
 .interior {
@@ -244,8 +263,16 @@ ul li.price {
     text-align: center;
     padding-top: 2rem;
     margin: auto;
+    margin-bottom: 50px;
 }
 
+.interior h1 {
+    color: #4d5256;
+}
+
+.interior i b {
+    color: rgb(84, 120, 128);
+}
 
 .table {
     width: 100%;
@@ -276,11 +303,13 @@ ul li.price {
 }
 
 .table tbody tr:nth-child(odd) {
-    background: #ffffff;
+    background-color: #f2f2f2;
+
 }
 
 .table tbody tr:nth-child(even) {
-    background: #fbfbfb;
+    background: #ffffff;
+    border: 5px solid rgba(0, 0, 0, 0.07);
 }
 
 .table__wrapper {
@@ -289,6 +318,7 @@ ul li.price {
 
 .table tbody tr:hover {
     background-color: rgb(84, 120, 128);
+    color: #fff;
 }
 
 /* Style for buttons */
@@ -305,7 +335,8 @@ ul li.price {
 @media (max-width: 768px) {
     .hero {
         height: 80vh;
-        color: black;
+        color: white;
+        gap: 1rem;
     }
 
     .hero::after {
@@ -342,5 +373,134 @@ ul li.price {
 
     .btn {
         margin: 0;
+    }
+
+    .tabs {
+        padding-left: 0;
+        justify-content: left;
+    }
+
+    .hero h1 {
+        color: #fff;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 830px) {
+    .card .btn-con {
+        position: relative;
+    }
+
+    .card {
+        height: auto !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .subscribe .card {
+        width: 86%;
+    }
+
+    #subscription {
+        font-size: 2rem;
+    }
+}
+
+
+@media (max-width: 980px) {
+
+    .table {
+        width: 90%;
+
+        margin: auto;
+    }
+
+    .table td {
+        display: block;
+        text-align: right;
+        height: 2rem;
+
+    }
+
+    .table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: relative;
+        left: 0rem;
+        margin-right: 20px;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table tr {
+        display: block;
+        padding: 1rem 2rem 1rem;
+        margin-top: 1rem;
+        border-radius: 5px;
+    }
+
+    .btn {
+        margin: 0;
+    }
+
+    .extra-margin {
+        margin-top: 25px;
+    }
+
+    .extra-margin-30 {
+        margin-top: 30px;
+    }
+
+
+    .extra-margin-40 {
+        margin-top: 40px;
+    }
+
+}
+
+@media (max-width: 487px) {
+    .extra-margin-35 {
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 419px) {
+    .extra-margin-50 {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 412px) {
+    .extra-margin20 {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+    .table {
+        width: 95%;
+        margin: auto;
+    }
+
+    .table tr {
+
+        padding: 1rem 10px 1rem;
+        margin-top: 1rem;
+
+    }
+
+    .table td:before {
+
+        margin-right: 0px;
+        font-size: 14px;
+    }
+
+    .table td {
+
+        font-size: 14px;
     }
 }

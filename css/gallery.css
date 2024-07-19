@@ -17,19 +17,20 @@ main {
 
 .gallery-title {
     width: 100%;
-    height: 16rem;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #25272d;
-    background-image: url('../img/service-steam-car-detailing.jpg');
+    background-image: url(../img/service-steam-car-detailing.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     isolation: isolate;
     position: relative;
     z-index: 1;
+    background-size: cover;
 }
 
 .gallery-title::after {
@@ -38,7 +39,7 @@ main {
     content: '';
     z-index: -1;
     box-shadow: inset 0 0 100vw black;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(7px);
 }
 
 .gallery-title h1 {
@@ -64,11 +65,14 @@ main {
     flex-direction: column;
     text-align: center;
     gap: .2rem;
+    width: 46%;
+    margin: 5px;
+
 }
 
 .gallery-section {
-    width: 90vw;
-    margin: auto;
+    width: 73%;
+    margin: 50px;
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -79,6 +83,19 @@ main {
 }
 
 .gallery-section .row img {
-    width: 30rem;
+    width: 100%;
     border-radius: 10px;
+}
+
+@media (max-width:905px) {
+    .gallery-section .row {
+        width: 100%;
+
+    }
+}
+
+@media (max-width:300px) {
+    .gallery-title h1 {
+        font-size: 4rem;
+    }
 }

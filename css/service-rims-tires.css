@@ -13,13 +13,14 @@ main {
     align-items: center;
     text-align: center;
     background-color: #25272d;
-    background-image: url('../img/rimstires.jpg');
+    background-image: url('../img/rims.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     isolation: isolate;
     position: relative;
     z-index: 1;
+    background-size: cover;
 }
 
 .service-title::after {
@@ -28,7 +29,7 @@ main {
     content: '';
     z-index: -1;
     box-shadow: inset 0 0 100vw black;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
 }
 
 .service-title h1 {
@@ -37,9 +38,12 @@ main {
     color: white;
     z-index: 10;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.service-title h1::after {
+/* .service-title h1::after {
     content: '';
     position: absolute;
     top: 6.4rem;
@@ -47,7 +51,7 @@ main {
     width: 6rem;
     height: .2rem;
     background-color: #d50000;
-}
+} */
 
 .rims-tires-services-section {
     display: flex;
@@ -58,7 +62,7 @@ main {
 }
 
 .service {
-    width: 80%;
+    width: 86%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
@@ -66,6 +70,7 @@ main {
     gap: 2rem;
     overflow: hidden;
     border-radius: 20px;
+    background-color: #54788039;
 }
 
 .service:hover {
@@ -79,15 +84,17 @@ main {
 
 .service img {
     width: 100%;
+    height: 100%;
 }
 
 .service .service-info h3 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
+    color: #4d5256;
 }
 
 .service .service-info {
-    padding-left: 1rem;
+    padding: 20px;
 }
 
 .service .service-info ul>li {
@@ -143,25 +150,94 @@ button {
 }
 
 .slider img {
-    width: 100px;
-    height: 100px;
-    animation: scroll 10s linear infinite;
-  }
-  
-  .slide-track {
+    width: 200px;
+    height: 125px;
+    animation: scroll 16s linear infinite;
+}
+
+.slide-track {
     width: 100%;
     display: flex;
     gap: 3em;
     overflow: hidden;
-  }
-  
-  .slider {
+}
+
+.slider {
     background-color: whitesmoke;
-    padding: 2em 2em;
-    width: 95vw;
-  }
-  
-  @keyframes scroll {
-    0% {transform: translateX(0);}
-    100% {transform: translatex(-1000%)}
-  }
+    padding: 2rem 0;
+    width: 98vw;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translatex(-1000%)
+    }
+}
+
+.service-info p {
+
+    margin: 24px 0px;
+
+}
+
+.service-info ul {
+    list-style: disc !important;
+}
+
+#career {
+    background: #547880;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); */
+    padding: 30px 10px;
+    /* padding-bottom: 50px; */
+    /* margin-bottom: 28px; */
+}
+
+#career div h1 {
+    color: #4d5256;
+    font-size: 30px;
+}
+
+.carreer-p {
+    color: white;
+    margin: 20px 40px;
+    margin-bottom: 40px;
+}
+
+.btn-get-started {
+    margin-top: 5rem;
+    padding: .5rem 2rem;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    box-shadow: 0 0 16px 8px rgba(213, 0, 0, 0.2);
+    background: linear-gradient(to right, #d50000, #710000);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer-wave-svg-1 {
+    fill: #547880;
+}
+
+.footer-wave-svg-2 {
+    background-color: transparent;
+    display: block;
+    height: 30px;
+    position: relative;
+    top: -1px;
+    width: 100%;
+
+}
+
+@media (min-width: 760px) {
+    .footer-wave-svg-2 {
+        height: 50px;
+    }
+}
